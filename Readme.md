@@ -2,8 +2,11 @@
 
 ### Content
 `alice_filetered_agg_Ragni2016.ods`: Aggregated 64-syllogism table of alice's 139 dataset
+
 `raw_agg_Ragni2016.ods`: Aggregated 64-syllogsim table without filtering
+
 `filtered_139_data`: the filtered 139 dataset with extraction scripts
+
 `raw_analysis`: the raw alice dataset with modified extraction scripts
 
 ### Methods
@@ -27,3 +30,7 @@ This procedure is not well-tested and may contain errors.
 ### Conclusions
 The 279-dataset has a substantially higher entropy, compared to the filtered 139-dataset.
 Also, the NVC answer is less frequent in the 279 dataset.
+
+### Contributions
+* Data by Alice
+* Analysis by Lukas
