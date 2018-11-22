@@ -5,10 +5,10 @@ This dataset is based on a filetered subset of the Ragni2016 dataset.
 This project analyzes if the filtering procedure is adequate.
 
 ### Content
-`reproduce_filtering`: Reproduce the filtering approach by Marco and Alice; Compare resulting distributions
-`aggregate_analysis`: Compare the filtered and raw datasets on the aggregate level
-`extraction`: basic extraction scripts
-`raw`: Archieved data left by Alice
+* `reproduce_filtering`: Reproduce the filtering approach by Marco and Alice; Compare resulting distributions
+* `aggregate_analysis`: Compare the filtered and raw datasets on the aggregate level
+* `extraction`: basic extraction scripts
+* `raw`: Archieved data left by Alice
 
 
 ### Methods
