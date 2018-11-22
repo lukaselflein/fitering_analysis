@@ -29,6 +29,9 @@ The filtering can be reproduced, but does not seem warranted.
 * We expect that this loss of information leads to substantial bias in modeling human reasonig
 * We already observed that the ranking of cognitive models (Khemlani table) depends strongly on which of the filtered datasets is used
 
+![Alt text](reproduce_filering/correctness_plot.png?raw=true "Title")
+
+
 We recommend discontinuing the use of correctness criteria for detection of anomalous users.
 
 ### Contributions
