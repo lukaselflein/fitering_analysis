@@ -1,36 +1,37 @@
 # Re-Analysis of the Ragni2016 dataset
+As the main source of information on human syllogstic reasoning behavior, we relie on a dataset of Marco and Alice (2016). It consists of 139 participants.
+
+This dataset is based on a filetered subset of the Ragni2016 dataset.
+This project analyzes if the filtering procedure is adequate.
 
 ### Content
-`alice_filetered_agg_Ragni2016.ods`: Aggregated 64-syllogism table of alice's 139 dataset
+`reproduce_filtering`: Reproduce the filtering approach by Marco and Alice; Compare resulting distributions
+`aggregate_analysis`: Compare the filtered and raw datasets on the aggregate level
+`extraction`: basic extraction scripts
+`raw`: Archieved data left by Alice
 
-`raw_agg_Ragni2016.ods`: Aggregated 64-syllogsim table without filtering
-
-`filtered_139_data`: the filtered 139 dataset with extraction scripts
-
-`raw_analysis`: the raw alice dataset with modified extraction scripts
 
 ### Methods
-Example tasks (underscore _ in task name) were removed.
+To reproduce the filtered dataset, we remove
+* incomplete answer patterns
+* participants with less than 17% correctness according to FOL
+* test tasks
 
-#### Filtered dataset
-I extracted and aggregated the individual data into a color-coded table.
+Also, we calculate entropy and aggregate the data.
 
-##### Filtering process
-The filtering process is not documented, but according to Nico and Marco,
-participants scoring lower than some threshold (14%?) in logical correctness were dropped.
-Maybe also participants with low reaction times were dropped.
+### Conclusion
+Filtering leads to a substantial decrease in entropy.
 
-#### Raw dataset
-I removed participants with empty premise information in addition to the test tasks.
-Then I went on with extracting and aggregating the data.
-This procedure is not well-tested and may contain errors.
-279 participants were considered - this was also the maximum number of answers for a syllogism.
-218 participants answered every single syllogism.
+The filtering can be reproduced, but does not seem warranted.
+* `reproduce.py` shows that removing incomplete data and participants with low correctness leads to nearly exactly the same distribution of correctnesses
+* Two participants are filtered out additionally, there seems to be be  another filtering criterion
+* Filtering out participants with low correctness leads to a massive loss of information
+* We expect that this loss of information leads to substantial bias in modeling human reasonig
+* We already observed that the ranking of cognitive models (Khemlani table) depends strongly on which of the filtered datasets is used
 
-### Conclusions
-The 279-dataset has a substantially higher entropy, compared to the filtered 139-dataset.
-Also, the NVC answer is less frequent in the 279 dataset.
+We recommend discontinuing the use of correctness criteria for detection of anomalous users.
 
 ### Contributions
-* Data by Alice
+* Data by Alice and Marco
+* Filtering by Alice and Marco
 * Analysis by Lukas

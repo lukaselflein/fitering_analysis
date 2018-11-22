@@ -2,7 +2,8 @@
 
 Copyright 2018 Cognitive Computation Lab
 University of Freiburg
-Nicolas Riesterer <riestern@tf.uni-freiburg.de>
+Author: Nicolas Riesterer <riestern@tf.uni-freiburg.de>
+Modified: Lukas Elflein <elfleinl@cs.uni-freiburg.de>
 
 """
 
@@ -22,7 +23,7 @@ data_df['response'] = data_df['response'].replace('NVCnvc', 'NVC')
 # Drop the uninteresting columns
 uninteresting_columns = [
     'breaktype', 'code', 'ConclDir', 'ConclQ',
-    'correctness', 'datetime', 'givenanswer',
+    'correctness', 'givenanswer',
     'givenanswertext', 'nouns', 'ordering', 'ordertext',
     'validConclusions', 'vpid'
 ]
@@ -63,5 +64,9 @@ data_df = data_df[[
     'response_order', 'domain',
     'possible_responses']]
 
+# How many participants are left?
+nr_participants = len(data_df.id.unique())
+print('Total unique participant ids: {}'.format(nr_participants))
+
 # Write the table to a file
-data_df.to_csv('Ragni2016.csv', index=False)
+data_df.to_csv('Ragni2016_{}.csv'.format(nr_participants), index=False)
