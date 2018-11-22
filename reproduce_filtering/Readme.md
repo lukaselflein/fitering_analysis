@@ -2,14 +2,14 @@
 This project reproduces the filtering approach to outlier detection done by Alice.
 
 ### Content
-`syllog.csv`: the raw data exported from the web experiment data base
-`syllo64_dataFil_raw.csv`: data filtered by alice, N=139, used in all our papers
+* `syllog.csv`: the raw data exported from the web experiment data base
+* `syllo64_dataFil_raw.csv`: data filtered by alice, N=139, used in all our papers
 
-`Ragni2016_raw.csv`: minimally processed data (removed training tasks)
-`Ragni2016_complete.csv`: exclusively the participants who answered to exactly 64 syllogisms
-`Ragni2016_filtered.csv`: complete datasets with a correctness-rate above 17% (binomal test for random guessing)
+* `Ragni2016_raw.csv`: minimally processed data (removed training tasks)
+* `Ragni2016_complete.csv`: exclusively the participants who answered to exactly 64 syllogisms
+* `Ragni2016_filtered.csv`: complete datasets with a correctness-rate above 17% (binomal test for random guessing)
 
-`reproduce.py`: script to extract, filter and visualize the above datasets
+* `reproduce.py`: script to extract, filter and visualize the above datasets
 
 ### Conclusion
 We can reproduce the filtering, but it does not seem warranted.
